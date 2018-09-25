@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 const Message = ({ author, message }) => (
     <p>
         <i>{author}</i>: {message}
