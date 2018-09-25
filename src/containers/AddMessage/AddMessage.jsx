@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 // import actions for redux store
@@ -11,7 +11,6 @@ export class AddMessage extends Component {
         message: ''
     }
 
-
     handleInputChange = e => {
         this.setState({
             message: e.target.value
@@ -20,8 +19,7 @@ export class AddMessage extends Component {
 
     // send message on --enter-- key press
     handleAddMessage = e => {
-        e.preventDefault()
-        if (e.key = 'Enter') {
+        if (e.key === 'Enter') {
             this.props.onAddMessage(this.state.message, 'Me')
             this.setState({message: ''})
         }
@@ -48,8 +46,8 @@ const mapDispatchToProps = dispatch => ({
 })
 
 // proptypes check
-AddMessage.PropTypes = {
-    onAddMessage: PropTypes.func.isRequired
+AddMessage.propTypes = {
+    onAddMessage: propTypes.func.isRequired
 }
 
 // component is exported

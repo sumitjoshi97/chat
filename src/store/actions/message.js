@@ -5,12 +5,12 @@ let nextUserId = 0
 
 export const addMessage = (message, author) => ({
     type: actionTypes.ADD_MESSAGE,
-    id: nextMessagId++,
+    id: nextMessageId++,
     message,
     author
 })
 
-export const addUSer = name => ({
+export const addUser = name => ({
     type: actionTypes.ADD_USER,
     id: nextUserId ++,
     name

@@ -9,10 +9,10 @@ export default (state = initialState, action) => {
 
         case actionTypes.ADD_USER:
             return { ...state,
-                users: [...state.users, [{
+                users: [...state.users, {
                     name: action.name,
                     id: action.id
-                }]]
+                }]
             }
 
         case actionTypes.USERS_LIST:
