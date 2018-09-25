@@ -1,6 +1,7 @@
 // importing dependencies
 import React from 'react'
 import PropTypes from 'props-types'
+import { connect } from 'react-redux'
 
 // import child components
 import Message from './Message/Message'
@@ -8,7 +9,6 @@ import Message from './Message/Message'
 const MessagesList = ({ messages }) => (
     <section id="messages-list">
         <ul>
-
             {/* mapping message list to Message Component */}
             {messages.map(message => (
                 <Message
@@ -20,6 +20,11 @@ const MessagesList = ({ messages }) => (
     </section>
 )
 
+// mapping redux store to state
+const mapStateToProps = state => ({
+    users: state.users.users
+})
+
 MessagesList.PropTypes = {
     messages: PropTypes.arrayOf(
         PropTypes.shape({
@@ -30,4 +35,4 @@ MessagesList.PropTypes = {
     ).isRequired
 }
 
-export default MessagesList
+export default connect(mapStateToProps)(MessagesList)
