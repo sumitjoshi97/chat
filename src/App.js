@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {Sidebar} from './containers/Sidebar/Sidebar'
-import {MessagesList} from './containers/MessagesList/MessagesList'
-import {AddMessage} from './containers/AddMessage/AddMessage'
+import Sidebar from './containers/Sidebar/Sidebar'
+import MessagesList from './containers/MessagesList/MessagesList'
+import AddMessage from './containers/AddMessage/AddMessage'
 import './App.css';
 
 class App extends Component {
