@@ -22,7 +22,7 @@ wss.on('connection', (ws) => {
             case 'ADD_USER':
                 {
                     index = users.length
-                    user.push({
+                    users.push({
                         name: data.name,
                         id: index + 1
                     })
