@@ -9,7 +9,7 @@ import { createStore, compose, applyMiddleware } from 'redux'
 import {addUser} from './store/actions/message'
 import './index.css';
 import App from './App';
-import handleNewMessage from './sagas'
+import handleNewMessage from './sagas/index'
 import username from './utils/name'
 
 // importing sockets
