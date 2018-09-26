@@ -16,13 +16,14 @@ export default (state = initialState, action) => {
         }]
       }
 
-    // case actionTypes.MESSAGE_RECEIVED:
-    //   return {
-    //     ...state,
-    //     id: action.id,
-    //     message: action.message,
-    //     author: action.author
-    //   }
+    case actionTypes.MESSAGE_RECEIVED:
+      return { ...state,
+        messages: [...state.messages, {
+          id: action.id,
+          message: action.message,
+          author: action.author
+        }]
+      }
 
     default:
       return state
