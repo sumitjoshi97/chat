@@ -1,6 +1,6 @@
-const ws = require('ws')
+const WebSocket = require('ws')
 
-const wss = new ws.Server({
+const wss = new WebSocket.Server({
     port: 8989
 })
 
@@ -37,15 +37,15 @@ wss.on('connection', (ws) => {
                     break
                 }
 
-            case 'ADD_MESSAGE': 
+            case 'ADD_MESSAGE':
                 broadcast({
                     type: 'ADD_MESSAGE',
                     message: data.message,
                     author: data.author
                 }, ws)
                 break
-            
-            default: 
+
+            default:
                 break
         }
     })
