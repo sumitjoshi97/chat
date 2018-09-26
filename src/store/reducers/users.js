@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
             }
 
         case actionTypes.USERS_LIST:
-            return action.user
+            return action.users
         
         default:
             return state
